@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.hero{
+    width: 90%;
+    margin-left: 5%;
+}
+
+td, th {
+  border: 2px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  font-size: 18px;
+}
+th{
+    background-color: #5a8ac0;
+    color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #bad4f2;
+}
+tr:nth-child(odd) {
+  background-color: #dfe9f5;
+}
+</style>
+</head>
+<body>
+
+<h2>All Employee Details</h2>
+<div class="hero">
+<table>
+  <tr>
+    <th>Id</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Phone</th>
+    <th>Deartment</th>
+    <th>Address</th>
+  </tr>
+  {% for i in emps %}
+  <tr>
+    <td>{{i.id}}</td>
+    <td>{{i.fname}}</td>
+    <td>{{i.lname}}</td>
+    <td>{{i.phone}}</td>
+    <td>{{i.dept}}</td>
+    <td>{{i.address}}</td>
+  </tr>
+  {% endfor %}
+  </table>
+</div>
+</body>
+</html>
+
